@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Student Registration Form</title>
+<style>
+body{
+    background:#222222;
+    font-family:Arial;
+}
+table{
+    background:blue;
+    color:white;
+    width:460px;
+    margin:auto;
+    border-collapse:collapse;
+    font-size:12px;
+}
+td{
+    padding:4px;
+    vertical-align:top;
+}
+input,select,textarea{
+    font-size:11px;
+}
+h3{
+    text-align:center;
+    color:blue;
+}
+</style>
+</head>
+
+<body>
+
+<h3>Student Registration Form Using Table</h3>
+
+<table border="1">
+
+<tr><td>First Name</td><td><input type="text"></td></tr>
+<tr><td>Last Name</td><td><input type="text"></td></tr>
+<tr><td>Email ID</td><td><input type="email"></td></tr>
+<tr><td>Mobile</td><td><input type="text"></td></tr>
+
+<tr>
+<td>Gender</td>
+<td>
+<input type="radio" name="g"> Male
+<input type="radio" name="g"> Female
+</td>
+</tr>
+
+<tr>
+<td>DOB</td>
+<td>
+<select><option>Day</option></select>
+<select><option>Month</option></select>
+<select><option>Year</option></select>
+</td>
+</tr>
+
+<tr>
+<td>Address</td>
+<td><textarea rows="2"></textarea></td>
+</tr>
+
+<tr><td>City</td><td><input type="text"></td></tr>
+<tr><td>Pin Code</td><td><input type="text"></td></tr>
+<tr><td>State</td><td><input type="text"></td></tr>
+<tr><td>Country</td><td><input type="text" value="India"></td></tr>
+
+<tr>
+<td>Hobbies</td>
+<td>
+<input type="checkbox"> Drawing
+<input type="checkbox"> Singing
+<input type="checkbox"> Dancing
+</td>
+</tr>
+
+<tr>
+<td>Qualification</td>
+<td>
+<input type="checkbox"> High School(10th)<br>
+<input type="checkbox"> Higher School(12th)<br>
+<input type="checkbox"> Graduation<br>
+<input type="checkbox"> Post Graduation
+</td>
+</tr>
+
+<tr>
+<td>Courses Applied For</td>
+<td>
+<input type="radio" name="c"> BCA<br>
+<input type="radio" name="c"> B.Com<br>
+<input type="radio" name="c"> B.Sc<br>
+<input type="radio" name="c"> BA<br>
+<input type="radio" name="c"> MCA<br>
+<input type="radio" name="c"> M.Com<br>
+<input type="radio" name="c"> M.Sc
+</td>
+</tr>
+
+<tr>
+<td colspan="2" align="center">
+<input type="submit" value="Submit">
+<input type="reset" value="Reset">
+</td>
+</tr>
+
+</table>
+
+</body>
+</html>
