@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Facebook Login page</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+body{
+    background:#f0f2f5;
+}
+
+/* container */
+.wrapper{
+    width:100%;
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+/* common card */
+.card{
+    width:400px;
+    background:#fff;
+    padding:20px;
+    border-radius:8px;
+    box-shadow:0 0 10px rgba(0,0,0,0.2);
+    display:none;
+}
+
+/* show login by default */
+#login{
+    display:block;
+}
+
+/* target logic */
+#login:target{
+    display:block;
+}
+#signup:target{
+    display:block;
+}
+#signup:target ~ #login{
+    display:none;
+}
+#login:target ~ #signup{
+    display:none;
+}
+
+/* logo */
+.logo{
+    text-align:center;
+    font-size:40px;
+    color:#1877f2;
+    font-weight:bold;
+    margin-bottom:10px;
+}
+
+/* input */
+input{
+    width:100%;
+    padding:12px;
+    margin:8px 0;
+    border:1px solid #ccc;
+    border-radius:6px;
+    font-size:15px;
+}
+
+/* buttons */
+.btn{
+    width:100%;
+    padding:12px;
+    background:#1877f2;
+    color:white;
+    border:none;
+    border-radius:6px;
+    font-size:18px;
+    font-weight:bold;
+    cursor:pointer;
+    margin-top:10px;
+}
+.btn-green{
+    background:#42b72a;
+}
+
+/* links */
+a{
+    text-decoration:none;
+    color:#1877f2;
+    display:block;
+    text-align:center;
+    margin-top:12px;
+    font-size:14px;
+}
+.line{
+    height:1px;
+    background:#ddd;
+    margin:15px 0;
+}
+</style>
+</head>
+
+<body>
+
+<div class="wrapper">
+
+    <!-- SIGN UP PAGE -->
+    <div id="signup" class="card">
+        <div class="logo">facebook</div>
+        <h2 style="text-align:center;">Create New Account</h2>
+        <p style="text-align:center; font-size:14px;">It's quick and easy.</p>
+
+        <input type="text" placeholder="First name">
+        <input type="text" placeholder="Surname">
+        <input type="email" placeholder="Mobile number or email">
+        <input type="password" placeholder="New password">
+
+        <button class="btn btn-green">Sign Up</button>
+
+        <a href="#login" target="_self">Already have an account?</a>
+    </div>
+
+    <!-- LOGIN PAGE -->
+    <div id="login" class="card">
+        <div class="logo">facebook</div>
+
+        <input type="text" placeholder="Email address or phone number">
+        <input type="password" placeholder="Password">
+
+        <button class="btn">Log In</button>
+
+        <a href="#">Forgotten password?</a>
+
+        <div class="line"></div>
+
+        <a href="#signup" target="_self">
+            <button class="btn btn-green" type="button">
+                Create New Account
+            </button>
+        </a>
+    </div>
+
+</div>
+
+</body>
+</html>

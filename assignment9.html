@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Layout Diagrams</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        .page {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+
+        .box {
+            border: 2px solid black;
+            height: 300px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .header, .footer {
+            border-bottom: 1px solid black;
+            text-align: center;
+            padding: 5px;
+        }
+
+        .footer {
+            border-top: 1px solid black;
+            border-bottom: none;
+            margin-top: auto;
+        }
+
+        .menu {
+            border-bottom: 1px solid black;
+            text-align: center;
+            padding: 5px;
+        }
+
+        .content {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-bottom: 1px solid black;
+        }
+
+        /* Diagram 2 & 4 header */
+        .top-bar {
+            display: flex;
+            border-bottom: 1px solid black;
+        }
+
+        .logo {
+            width: 25%;
+            border-right: 1px solid black;
+            text-align: center;
+            padding: 5px;
+        }
+
+        .menu2 {
+            width: 75%;
+            text-align: center;
+            padding: 5px;
+        }
+
+        /* Diagram 3 */
+        .content-3 {
+            display: flex;
+            flex: 1;
+            border-bottom: 1px solid black;
+        }
+
+        .left, .right {
+            width: 20%;
+            border-right: 1px solid black;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .right {
+            border-right: none;
+            border-left: 1px solid black;
+        }
+
+        .center {
+            width: 60%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* Diagram 4 */
+        .content-4 {
+            display: flex;
+            flex: 1;
+            border-bottom: 1px solid black;
+        }
+
+        .sidebar {
+            width: 25%;
+            border-right: 1px solid black;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .main {
+            width: 75%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+    </style>
+</head>
+
+<body>
+
+<div class="page">
+
+    <!-- Diagram 1 -->
+    <div class="box">
+        <div class="header">Header Section</div>
+        <div class="menu">Menu Section</div>
+        <div class="content">Content Area</div>
+        <div class="footer">Footer Section</div>
+    </div>
+
+    <!-- Diagram 2 -->
+    <div class="box">
+        <div class="top-bar">
+            <div class="logo">Logo</div>
+            <div class="menu2">Menu section</div>
+        </div>
+        <div class="content">Content Area</div>
+        <div class="footer">Footer Section</div>
+    </div>
+
+    <!-- Diagram 3 -->
+    <div class="box">
+        <div class="header">Header Section</div>
+        <div class="menu">Menu Section</div>
+        <div class="content-3">
+            <div class="left">Left Section</div>
+            <div class="center">Content Area</div>
+            <div class="right">Right Section</div>
+        </div>
+        <div class="footer">Footer Section</div>
+    </div>
+
+    <!-- Diagram 4 -->
+    <div class="box">
+        <div class="top-bar">
+            <div class="logo">Logo</div>
+            <div class="menu2">Menu section</div>
+        </div>
+        <div class="content-4">
+            <div class="sidebar">Sidebar</div>
+            <div class="main">Content Area</div>
+        </div>
+        <div class="footer">Footer Section</div>
+    </div>
+
+</div>
+
+</body>
+</html>
